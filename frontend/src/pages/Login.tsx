@@ -70,6 +70,12 @@ export const Login = () => {
                         onChange={handleUsernameChange}
                         required
                         autoFocus
+                        inputProps={{
+                            autocomplete: 'new-password',
+                            form: {
+                                autocomplete: 'off',
+                            },
+                        }}
                     />
                     <TextField
                         error={state.hasError}
@@ -83,6 +89,12 @@ export const Login = () => {
                         onChange={handlePasswordChange}
                         required
                         name="password"
+                        inputProps={{
+                            autocomplete: 'new-password',
+                            form: {
+                                autocomplete: 'off',
+                            },
+                        }}
                     />
                     <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
                         Sign In
