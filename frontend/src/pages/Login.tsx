@@ -33,7 +33,6 @@ export const Login = () => {
         if (code === '200' && login) {
             login(message);
         } else {
-            console.log(message);
             dispatch({
                 type: 'loginFailed',
                 payload: 'Unable to login.  Please check your username and password.',
@@ -71,9 +70,9 @@ export const Login = () => {
                         required
                         autoFocus
                         inputProps={{
-                            autocomplete: 'new-password',
+                            autoComplete: 'new-password',
                             form: {
-                                autocomplete: 'off',
+                                autoComplete: 'off',
                             },
                         }}
                     />
@@ -90,9 +89,9 @@ export const Login = () => {
                         required
                         name="password"
                         inputProps={{
-                            autocomplete: 'new-password',
+                            autoComplete: 'new-password',
                             form: {
-                                autocomplete: 'off',
+                                autoComplete: 'off',
                             },
                         }}
                     />
@@ -109,7 +108,7 @@ export const Login = () => {
                         <Link href="#" variant="body2">
                             Forgot password?
                         </Link>
-                        <Link href="#" variant="body2">
+                        <Link href="/register" variant="body2">
                             {"Don't have an account? Sign Up"}
                         </Link>
                     </Box>

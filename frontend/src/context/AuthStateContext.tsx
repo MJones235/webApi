@@ -10,6 +10,7 @@ export const AuthStateProvider = (props: AuthStateProviderProps) => {
     const login = (token: string) => {
         localStorage.setItem('token', token);
         setToken(token);
+        console.log(token);
     };
 
     const logout = () => {
